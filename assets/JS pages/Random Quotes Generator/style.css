@@ -1,0 +1,60 @@
+
+ * {
+     padding: 0;
+     margin: 0;
+ }
+
+ body {
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ /* Set styles for the container div */
+ .container {
+     margin: auto;
+     width: 50%;
+     text-align: center;
+     background-color: #1c1c1c;
+     border-radius: 20px;
+     padding: 20px;
+ }
+
+ /* Set styles for the quote paragraph */
+ #quote {
+     font-size: 26px;
+     color: #f2f2f2;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-weight: 500;
+     word-spacing: 5px;
+     text-align: center;
+ }
+
+ /* Set styles for the author span */
+ #author {
+     color: #f2f2f2;
+     display: block;
+     font-size: 19px;
+     margin-top: 10px;
+     font-style: italic;
+ }
+
+
+ /* Set styles for the generate button */
+ button {
+     margin-top: 20px;
+     padding: 10px;
+     font-size: 20px;
+     border-radius: 5px;
+     border: none;
+     background-color: #008CBA;
+     color: white;
+     cursor: pointer;
+ }
+
+ /* Set hover styles for the generate button */
+ button:hover {
+     background-color: #005f6b;
+ }

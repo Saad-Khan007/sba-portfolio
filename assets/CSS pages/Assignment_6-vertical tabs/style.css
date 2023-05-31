@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------------Container 1----------------------- */
+.container_1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0089F7;
+    font-size: 20px;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(25px, 40px, 60px);
+}
+
+.con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    padding: 20px;
+}
+
+.box {
+    width: clamp(25%, 25%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(231, 231, 231);
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: #0089F7;
+    color: white;
+    box-shadow: none;
+}
+
+.box p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(1px, 1rem, 72px);
+    margin: 10px 0;
+}
+
+/* -------------------------Container 2----------------------- */
+.container_2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 60px;
+}
+
+.box1 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box1_1 {
+    align-items: end;
+    gap: 20px;
+}
+
+.box2 {
+    border: 4px solid #0089F7;
+    border-radius: 20px;
+    padding: 30px;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    gap: 20px;
+
+}
+
+.box_1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 25px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px -1px rgb(223, 223, 223);
+    font-family: 'Quicksand', sans-serif;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.active {
+    background: rgb(192, 227, 255);
+    background: linear-gradient(270deg, rgba(192, 227, 255, 1) 0%, rgba(0, 137, 247, 1) 100%);
+    color: white;
+    box-shadow: none;
+}
+
+.box_1 img {
+    width: 60px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #0089F7;
+    background-color: white;
+    color: #0089F7;
+    font-weight: 900;
+    transition: all .3s;
+}
+
+button:hover {
+    background-color: #0089F7;
+    color: white;
+}
+
+.ptext {
+    color: rgb(68, 68, 68);
+    text-align: justify;
+    width: 90%;
+}
+
+@media (max-width:1200px) {
+    .box{
+        width: 100%;
+    }
+    .container_2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box1 {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box2 {
+        width: 90%;
+    }
+
+    .box_1 {
+        width: 100%;
+    }
+}

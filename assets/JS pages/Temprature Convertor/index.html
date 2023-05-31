@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://earthobservatory.nasa.gov/img/biome/thermometer-desert-day.jpg" type="image/x-icon">
+    <title>Temprature Convertor</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container:hover {
+            box-shadow: 0 0 20px rgb(0, 191, 255);
+        }
+
+        .container {
+            width: clamp(50%,400px, 100%);
+            border: 4px solid rgb(253, 253, 253);
+            background-color: rgb(253, 253, 253);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 0 5px rgb(0, 191, 255);
+            transition: all .3s;
+        }
+
+        .box1 {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        input,
+        select {
+            margin-bottom: 10px;
+            margin-top: 3px;
+            border: none;
+            border-bottom: 2px solid rgb(0, 191, 255);
+            color: rgb(0, 191, 255);
+            border-radius: 10px;
+            outline: none;
+            height: 30px;
+            background-color: transparent;
+            font-size: 18px;
+            width: 100%;
+            padding: 1px 20px;
+        }
+
+        option {
+            border-radius: 0 0 10px 10px;
+            background-color: rgb(0, 191, 255);
+            color: white;
+        }
+
+        label {
+            color: rgb(0, 191, 255);
+            font-weight: 900;
+            font-size: larger;
+            border-bottom: 4px;
+        }
+
+        h1 {
+            color: rgb(0, 191, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Temprature Convertor</h1>
+        <div class="box1">
+            <label for="deg">Degrees(°C)</label>
+            <input type="number" name="deg" id="deg" value="0" autofocus>
+            <label for="sel">Type</label>
+            <select name="sel" id="sel">
+                <option value="f">Fahrenheit</option>
+                <option value="k">Kelvin</option>
+            </select>
+            <label for="res">Result</label>
+            <input type="text" readonly id="res" value="0°F">
+        </div>
+    </div>
+    <script>
+        let deg = document.getElementById('deg');
+        let sel = document.getElementById("sel");
+        let res = document.getElementById('res');
+        deg.addEventListener("keyup", change);
+        deg.addEventListener("change", change);
+        sel.addEventListener("change", change);
+
+        function change() {
+            let c;
+            if (sel.value === "f") {
+                let c = ((deg.value - 32) * 5) / 9;
+                res.value = c + "°F"
+            }
+            else if (sel.value === "k") {
+                let c = deg.value - 273.15;
+                res.value = c + "°K"
+            }
+        }
+    </script>
+</body>
+
+</html>

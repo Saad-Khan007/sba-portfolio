@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara | Online Shop</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./@media styles.css">
+    <link rel="shortcut icon"
+        href="https://img.icons8.com/external-others-inmotus-design/512/external-C-qwerty-keypad-others-inmotus-design-4.png"
+        type="image/x-icon" sizes="50px">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- nav bar starts from here -->
+    <nav class="nav">
+        <div class="left">Cara</div>
+        <div class="mid">
+            <a class="hov" href="#home">Home</a>
+            <a class="hov" href="#shop">shop</a>
+            <a class="hov" href="#news">blog</a>
+            <a class="hov" href="#contact">contact</a>
+            <a class="hov" href="#about">about</a>
+        </div>
+        <div class="right">
+            <i class="fa ba fa-shopping-bag"></i>
+            <i class="fa slider_icn fa-sliders" id="slider_icn" onclick="slider()"></i>
+
+        </div>
+    </nav>
+    <!-- ------------------------------------------------ -->
+    <!-- Mobile Nav section starts from here -->
+    <section class="mobile_nav" id="mobile_nav">
+        <a class="hov" href="#home">Home</a>
+        <a class="hov" href="#shop">shop</a>
+        <a class="hov" href="#news">blog</a>
+        <a class="hov" href="#contact">contact</a>
+        <a class="hov" href="#about">about</a>
+    </section>
+    <!-- ------------------------------------------------ -->
+    <div class="Err404">
+        <h2><b>Opp's,</b>The page you are looking is not found.</h2>   
+        <h3>Try Again,Later</h3>   
+        <a href="https://cara-dev.netlify.app/">Back To <b>Homepage</b></a>  
+    </div>
+    </section>
+    <!-- ------------------------------------------------ -->
+    <!-- Copyright section starts from here.. -->
+    <section class="copyright">
+        <p>&#169; 2018-2023 Cara | All Rights Reserved</p>
+    </section>
+    <!-- ------------------------------------------------ -->
+</body>
+
+</html>
+<script>
+    var i = 0;
+    function slider() {
+        var x = document.getElementById('mobile_nav');
+        if (i === 0) {
+            x.style.right = '0px';
+            i = 1;
+        } else {
+            x.style.right = '-350px';
+            i = 0;
+        }
+    }
+
+</script>

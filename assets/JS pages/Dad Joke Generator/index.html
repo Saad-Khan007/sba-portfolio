@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Joke Generator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(177, 183, 255);
+            background: linear-gradient(195deg, rgba(177, 183, 255, 1) 0%, rgba(240, 149, 216, 1) 50%, rgba(177, 183, 255, 1) 100%);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 40%;
+            width: 90%;
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255, .3);
+            text-align: center;
+            box-shadow: 0px 3px 8px rgb(48, 48, 48);
+        }
+
+        h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+            color: green;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 4px 3px rgb(192, 192, 192);
+        }
+        h3{
+            font-size: 20px;
+            text-transform:capitalize;
+            margin: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: green;
+        }
+        button{
+            background-color: rgb(255, 255, 255, .3);
+            color:green;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
+            padding: 10px 40px;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+            transition: all .5s;
+        }
+        .btn::after{
+            transition: all .5s;
+            content: '';
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            height: 50%;
+            width: 0%;
+            background-color: green;
+        }
+        .btn::before{
+            transition: all .5s;
+            content: '';
+            position: absolute;
+            display: inline-block;
+            top: 0%;
+            right: 0;
+            z-index: -1;
+            height: 50%;
+            width: 0%;
+            background-color: green;
+        }
+        button:hover{
+            color: white;
+        }
+        button:hover::after{
+            width: 100%;
+        }
+        button:hover::before{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>Dad Joke Generator</h1>
+            <h3 id="joke"></h3>
+            <button class="btn" onclick="jokeGen()">tell me a joke</button>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    const jokes = [
+        "Why was the math book sad? Because it had too many problems.",
+        "What do you call an alligator in a vest? An inVESTigator.",
+        "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+        "Why did the scarecrow win an award? Because he was outstanding in his field.",
+        "Why did the tomato turn red? Because it saw the salad dressing.",
+        "What do you call a fake noodle? An impasta.",
+        "Why don't skeletons fight each other? They don't have the guts.",
+        "Why don't scientists trust atoms? Because they make up everything.",
+        "Why don't oysters share their pearls? Because they're shellfish.",
+        "What's orange and sounds like a parrot? A carrot.",
+        "Why did the scarecrow win an award? Because he was outstanding in his field.",
+        "Why don't scientists trust atoms? Because they make up everything.",
+        "Why did the chicken cross the playground? To get to the other slide.",
+        "Why don't eggs tell jokes? Because they'd crack each other up.",
+        "What's the difference between a poorly dressed man on a trampoline and a well-dressed man on a trampoline? Attire.",
+        "Why do they call it a 'building' when it's already been built? Shouldn't it be called a 'built'?",
+        "Why did the coffee file a police report? It got mugged.",
+        "Why did the tomato turn red? Because it saw the salad dressing.",
+        "I used to play piano by ear. Now I use my hands.",
+        "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+        "Why did the old man fall in the well? Because he couldn't see that well.",
+        "Why did the bicycle fall over? Because it was two-tired.",
+        "What do you call a fake noodle? An impasta.",
+        "Why did the duck cross the road? To prove he wasn't a chicken.",
+        "Why don't skeletons fight each other? They don't have the guts.",
+        "What do you call an alligator wearing a vest? An investigator.",
+        "Why did the math book look sad? Because it had too many problems.",
+        "Why don't scientists trust atoms? Because they make up everything.",
+        "What's the difference between a hippo and a zippo? One is heavy, the other is a little lighter.",
+        "Why was the math book sad? Because it had too many problems."
+    ];
+
+    let joke = document.getElementById('joke');
+        let n = Math.floor(Math.random() * 30);
+        joke.innerHTML = jokes[n];
+    function jokeGen() {
+        n = Math.floor(Math.random() * 30);
+        joke.innerHTML = jokes[n];
+    }
+</script>

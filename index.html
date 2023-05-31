@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/sba_Pink.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0868204d8a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="animation.css">
+    <title>SBA-Portfolio</title>
+</head>
+
+<body>
+    <!----------------Head Section---------------->
+    <nav id="nav">
+        <img src="./assets/sba_Pink1.png" class="logo">
+        <ul id="sideMenu">
+            <li style="--i:1"><a href="#">Home</a></li>
+            <li style="--i:2"><a href="#about">About</a></li>
+            <li style="--i:3"><a href="#services">Services</a></li>
+            <li style="--i:4"><a href="#portfolio">Portfolio</a></li>
+            <li style="--i:5"><a href="#contact">Contact</a></li>
+            <i class="fa fa-regular fa-circle-xmark" onclick="Menu('0')"></i>
+        </ul>
+        <i class="fa fa-solid fa-bars" onclick="Menu('1')"></i>
+    </nav>
+    <header id="home">
+        <div class="container">
+            <div class="home-con">
+                <div class="header-text">
+                    <h3 class="top">Hello, It's Me</h3>
+                    <h1>Saad Bin Ayyaz</h1>
+                    <h3>And I'm a <span class="multiple-text"></span></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia porro a ipsam alias natus quo!
+                    </p>
+                    <div class="social-icons1">
+                        <a style="--i:7" href="https://www.facebook.com/profile.php?id=100057986821846"
+                            target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a style="--i:8" href="https://instagram.com/saadkhan417322?igshid=ZDdkNTZiNTM%3D"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a style="--i:9"
+                            href="https://www.google.com/maps/dir/31.4428465,74.2863544/@31.4427948,74.2861793,21z"
+                            target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+                    </div>
+                    <a href="./assets/Saad-Bin-Ayyaz_CV.pdf" class="btn3" download="SBA-CV.pdf">Download CV</a>
+                </div>
+                <div class="img-port">
+                    <img src="./assets/lion-head.png">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!----------------About Section---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./assets/Lion Face.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a Learning front-end web development with a strong foundation in HTML, CSS, and JavaScript.
+                        I've honed my skills in building responsive and user-friendly websites that are visually
+                        appealing and easy to navigate.<br>
+                        My goal as a front-end web developer is to create beautiful and intuitive user interfaces that
+                        enhance the user experience and drive engagement. I enjoy collaborating with other developers
+                        and designers to bring a project to life, and thrive in a fast-paced, creative environment.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Eudcation</p>
+                    </div>
+                    <div class="tab-contents" id="skills">
+
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="120px" height="120px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="60" cy="60" r="50" stroke-linecap="square" />
+                            </svg>
+                            <span>HTML</span>
+                        </div>
+
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="120px" height="120px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="60" cy="60" r="50" stroke-linecap="square" />
+                            </svg>
+                            <span>CSS</span>
+                        </div>
+
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <span class="skillText">70%</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="120px" height="120px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="60" cy="60" r="50" stroke-linecap="square" />
+                            </svg>
+                            <span class="skillText">JS</span>
+                        </div>
+
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="120px" height="120px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="60" cy="60" r="50" stroke-linecap="square" />
+                            </svg>
+                            <span>Angular</span>
+                        </div>
+
+
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span>
+                                <ul class="expLi">
+                                    <li>Self-taught web developer with practical experience in HTML, CSS, and
+                                        JavaScript.</li>
+                                    <li>Developed responsive web designs and optimized websites for search engines,
+                                        using front-end frameworks such as Bootstrap and Materialize to enhance skills.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- <ul>
+                            <li><span>2021 - 2022</span><br>Graphic Designing at Superior College Wapda Town</li>
+                            <li><span>2022 - 2023</span><br>App Development at Superior College Wapda Town</li>
+                            <li><span>2023 - Current</span><br>Web Development at Superior College Wapda Town</li>
+                        </ul> -->
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - Current</span><br>ADP-CS at Superior College Wapda Town</li>
+                            <li><span>2019 - 2021</span><br>Intermediate from Government College Township</li>
+                            <li><span>2017 - 2019</span><br>Matriculation from Lahore Garrison School</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------Services Section---------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Every website should be built with two primary goals: Firstly, it needs to work across all
+                        devices. Secondly, it needs to be fast as possible.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>App development is a dynamic and creative process that involves designing, coding, testing, and
+                        deploying applications for mobile devices.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Graphic Design</h2>
+                    <p>Graphic design is the art of creating visual content to communicate a message. It involves using
+                        typography, imagery, color, and layout to design logos, posters, websites.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!----------------Portfolio Section---------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="filter">
+                <ul>
+                    <li class="filter-name" onclick="pfilter('all')">All</li>
+                    <li class="filter-name" onclick="pfilter('css')">CSS</li>
+                    <li class="filter-name" onclick="pfilter('js')">JS</li>
+                </ul>
+            </div>
+            <div class="work-list">
+
+                <div class="all work css">
+                    <img src="./assets/cara.jpg">
+                    <div class="layer">
+                        <h3>Cara | Online Shop</h3>
+                        <p>Indulge in style and elevate your wardrobe with our fashionable collection of clothing.</p>
+                        <a href="./assets/CSS pages/Assignment_2-Cara-Org/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work css">
+                    <img src="./assets/active.jpg">
+                    <div class="layer">
+                        <h3>Active House Technology</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/CSS pages/Assignment_3-ActiveHouse - Org/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/verticalTab.jpg">
+                    <div class="layer">
+                        <h3>Vertical Tabs</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/CSS pages/Assignment_6-vertical tabs/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/ABC_News.jpg">
+                    <div class="layer">
+                        <h3>ABC News</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/CSS pages/Assignment_7-News API/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/animeGen.jpg">
+                    <div class="layer">
+                        <h3>Anime Gnenerator</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/JS pages/Anime Gnenerator/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/bml.jpg">
+                    <div class="layer">
+                        <h3>BMI Calculator</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/JS pages/BMI Calculator/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/joke.jpg">
+                    <div class="layer">
+                        <h3>Dad Joke Generator</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/JS pages/Dad Joke Generator/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/engDic.jpg">
+                    <div class="layer">
+                        <h3>English Dictionary</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/JS pages/English Dictionary/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/feedui.jpg">
+                    <div class="layer">
+                        <h3>Feedback UI</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/JS pages/Feedback UI/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/temp.jpg">
+                    <div class="layer">
+                        <h3>Temprature Convertor</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/JS pages/Temprature Convertor/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/note.jpg">
+                    <div class="layer">
+                        <h3>Note App</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="https://sba-dev-noteapp.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="all work js">
+                    <img src="./assets/qgen.jpg">
+                    <div class="layer">
+                        <h3>Quotes Generator</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium commodi reiciendis fugit
+                            hic?</p>
+                        <a href="./assets/JS pages/Random Quotes Generator/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <a class="btn" id="seeBtn" onclick="seeMore()">See More</a>
+        </div>
+    </div>
+    <!----------------Contact Section---------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i><a
+                            href="mailto:saadkhan322417@gmail.com">saadkhan322417@gmail.com</a> </p>
+                    <p><i class="fa-solid fa-square-phone"></i> <a href="Tel:+92 3095182211">+92 3095182211</a></p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100057986821846" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/saadkhan417322?igshid=ZDdkNTZiNTM%3D" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.google.com/maps/dir/31.4428465,74.2863544/@31.4427948,74.2861793,21z"
+                            target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+                    </div>
+                    <a href="./assets/Saad-Bin-Ayyaz_CV.pdf" class="btn btn2" download="SBA-CV.pdf">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name.." required>
+                        <input type="email" name="Email" placeholder="Your E-mail.." required>
+                        <textarea name="Message" id="" rows="8" placeholder="Your Message.." required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023 SBA-Portfolio.All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="script.js"></script>

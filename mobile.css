@@ -1,0 +1,106 @@
+@import url(style.css);
+/* ----------------Mobile Screen---------------- */
+nav .fa {
+    display: none;
+}
+
+@media only screen and (max-width:900px) {
+
+    .logo {
+        height: 40px;
+    }
+
+    .home-con {
+        flex-direction: column;
+    }
+
+    .header-text {
+        width: 100%;
+    }
+
+    .img-port img {
+        display: none;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .header-text h3 {
+        font-size: 16px;
+    }
+
+    nav .fa {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        background: var(--main);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul li a::after {
+        background: var(--font);
+    }
+
+    nav ul .fa {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .about-col-2 p {
+        width: fit-content;
+        text-align: justify;
+    }
+
+    .services-list div {
+        padding: 20px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJWyeXssRvJ2zkreRguCp9KxlrQVguSeoquA&usqp=CAU"
+        type="image/x-icon">
+    </head>
+    
+<body onload="bmi()">
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="box1">
+            <label for="height">Your Height (cm) :</label>
+            <input type="number" value="164" id="height" min="24" max="300" required name="height">
+        </div>
+        <div class="box1">
+            <label for="weight">Your Weight (kg) :</label>
+            <input type="number" value="80" id="weight" min="10" max="150" required name="weight">
+        </div>
+        <button>Compute BMI</button>
+        <div class="box1">
+            <label for="res">Your BMI :</label>
+            <input type="number" value="0" id="res" readonly name="res">
+        </div>
+        <h2>Weight Condition: <span id="con"></span></h2>
+    </div>
+</body>
+</html>
+<script src="./script.js"></script>

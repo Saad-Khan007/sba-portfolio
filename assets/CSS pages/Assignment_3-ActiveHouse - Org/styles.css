@@ -1,0 +1,980 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #0b4b7f;
+    font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+  }
+  
+  html {
+    transition: all 1s;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  /* nav section starts from here */
+  nav {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    display: flex;
+    z-index: 10000000;
+    box-shadow: 0 0 5px black;
+  }
+  
+  nav::before {
+    content: '';
+    height: 75px;
+    width: 5.3%;
+    position: absolute;
+    background-color: red;
+    top: 0;
+    left: 6.75%;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+  }
+  
+  .left {
+    margin-left: 13%;
+  }
+  
+  .left img {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .right {
+    margin-right: 3%;
+  }
+  
+  .right a {
+    padding: 15px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: relative;
+    height: 100%;
+  }
+  
+  .right a::after {
+    content: '';
+    height: 0px;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    border-radius: 0 50px 50px 0;
+    background-color: red;
+    position: absolute;
+    transition: all 0.2s;
+  }
+  
+  .right a:hover::after {
+    height: 4px;
+  }
+  
+  .right a:active::after {
+    height: 4px;
+  }
+  
+  /* ------------------------------------------------------------------------- */
+  /* mobilenav section starts from here */
+  .slider {
+    font-size: 30px !important;
+    padding: 15px;
+    display: none !important;
+    transition: all 0.4s;
+  }
+  
+  .slider:hover {
+    background-color: rgb(231, 231, 231);
+    color: #0075d4;
+  }
+  
+  .mobile_nav {
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    background-color: #434343;
+    z-index: 999;
+    right: -100%;
+    overflow: auto;
+    top: 70px;
+    transition: all.5s;
+  }
+  
+  .mobile_nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    margin: 20px 50px;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+    right: -350px;
+    transition: all 0.3s;
+  }
+  
+  .mobile_nav a:hover {
+    color: red;
+    border-color: red;
+  }
+  
+  /* ----------------------------------------------------------------------------------- */
+  /* home section starts from here */
+  .home {
+    background: url('https://activehousetech.com/wp-content/uploads/2021/02/Mask-Group-15-2.png');
+    background-size: 100% 100%;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .home_pic_text0 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .home_pic_text {
+    margin-top: 10%;
+    width: 29%;
+  }
+  
+  .home_pic_text p,
+  h2 {
+    color: rgb(255, 255, 255);
+  }
+  
+  .home_img img {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    margin: 0 5px;
+  }
+  
+  .home_text p,
+  h2 {
+    text-align: center;
+  }
+  
+  .home_text p {
+    font-size: 12px;
+  }
+  
+  .home_text h2 {
+    font-size: 50px;
+  }
+  
+  .home_button {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .home_btn {
+    background-color: transparent;
+    color: #ffffff;
+    display: inline;
+    font-size: 12px;
+    border: 2px solid white;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 0 2px;
+    transition: all 0.2s;
+  }
+  
+  .home_btn:hover {
+    scale: 1.05;
+  }
+  
+  .home_img {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* ----------------------------------------------------------------------------------- */
+  /* services section starts from here */
+  .services {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    overflow-x: clip;
+  }
+  
+  .services::before {
+    content: url(https://dev.smartfive.co.uk/wp-content/uploads/2021/04/Group-226-1.png);
+    position: absolute;
+    top: -800px;
+    scale: 0.7;
+    left: -1.8%;
+    z-index: 0;
+  }
+  
+  .services::after {
+    content: url('https://dev.smartfive.co.uk/wp-content/uploads/2021/02/Group-009.png');
+    position: absolute;
+    transform: scale(0.69, 0.69);
+    top: 25%;
+    right: -5%;
+    z-index: 0;
+  }
+  
+  .services_div1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .services_div_2 {
+    width: 70%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .services_div h1,
+  p {
+    text-align: center;
+  }
+  
+  .services_div h1 {
+    font-size: 50px;
+  }
+  
+  .services_div p {
+    color: rgb(141, 141, 141);
+  }
+  
+  .services_div2 {
+    width: 430px;
+    height: 220px;
+    display: flex;
+    box-shadow: 0 0 5px rgb(187, 187, 187);
+    border-radius: 5px;
+  }
+  
+  .services_div2_div0 {
+    display: flex;
+    padding: 30px;
+  }
+  
+  .services_div2_div1 {
+    width: 30%;
+  }
+  
+  .services_div2_div1 img {
+    width: 100px;
+  }
+  
+  .services_div2_div2 {
+    width: 70%;
+  }
+  
+  .services_div2_div2 h3 {
+    font-size: 20px;
+    font-weight: 100;
+    color: black;
+  }
+  
+  .services_div2_div2 p {
+    text-align: left;
+    font-size: 17px;
+    color: rgb(107, 107, 107);
+  }
+  
+  .services_div3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .services_div3 div {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: black;
+    border: 1px solid rgb(239, 239, 239);
+    border-radius: 4px;
+    transition: all 0.2s;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.1)
+    );
+  }
+  
+  .services_div3 div:hover {
+    scale: 1.05;
+  }
+  
+  /* ----------------------------------------------------------------------------------- */
+  /* products section starts from here */
+  .products {
+    background-image: url(https://dev.smartfive.co.uk/wp-content/uploads/2021/02/Group-117-1.png);
+    background-repeat: no-repeat;
+    background-size: 110% 109%;
+    padding: 50px 0 120px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .products img {
+    height: 200px;
+  }
+  
+  .products h1 {
+    font-size: 50px;
+  }
+  
+  .products p {
+    color: rgb(119, 119, 119);
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .products h6 {
+    background-color: #0b4b7f;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 5px;
+  }
+  
+  .products_container {
+    display: flex;
+    width: 61%;
+    justify-content: end;
+    gap: 20px;
+  }
+  
+  .products_container0 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .products_container1 {
+    width: 50%;
+  }
+  
+  .products_img_container_2 {
+    display: flex;
+    justify-content: end;
+    width: 61%;
+  }
+  
+  .products_img_container_2 div {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* ----------------------------------------------------------------------------------- */
+  /* about section starts from here */
+  .about_us {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .about_us::before {
+    content: url(https://dev.smartfive.co.uk/wp-content/uploads/2021/05/about-sec-left.png);
+    position: absolute;
+    top: 0;
+    left: -4%;
+    scale: 0.7;
+  }
+  
+  .about_us::after {
+    background-color: red;
+    content: '';
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    top: 96%;
+    right: 0;
+  }
+  
+  .about_us_div_0 {
+    width: 95%;
+    background-color: #0b4b7f;
+    display: flex;
+    padding: 30px 0;
+  }
+  
+  .about_us_div_0 img {
+    width: 60%;
+  }
+  
+  .about_us_div_0 h1,
+  h6,
+  p {
+    color: #ffffff;
+  }
+  
+  .about_us_div_0 h1 {
+    font-size: 60px;
+  }
+  
+  .about_us_div_0 h6 {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: rgb(88, 88, 88);
+    border: 1px solid rgb(239, 239, 239);
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 20px;
+    border-radius: 4px;
+    background: rgb(203, 203, 203);
+    transition: all 0.2s;
+    background: linear-gradient(
+      360deg,
+      rgba(203, 203, 203, 1) 0%,
+      rgba(252, 252, 252, 1) 100%,
+      rgba(201, 201, 201, 1) 100%
+    );
+  }
+  
+  .about_us_div_0 h6:hover {
+    scale: 1.05;
+  }
+  
+  .about_us_div_0 p {
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: justify;
+    line-height: 25px;
+  }
+  
+  .about_us_div_1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about_us_div_2 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .about_us_div_2 div {
+    width: 80%;
+  }
+  
+  /* ----------------------------------------------------------------------------------- */
+  /* contact section starts from here */
+  .contact_us {
+    background: url(https://dev.smartfive.co.uk/wp-content/uploads/2021/02/Group-007.png)
+      center center no-repeat;
+    background-size: cover;
+  }
+  
+  .contact_us_1 {
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding: 5% 0;
+  }
+  
+  .contact_us div h1 {
+    color: white;
+    font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+  
+  .contact_us div input {
+    font-size: 23px;
+    padding: 10px;
+    width: 49.4%;
+    height: 39px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    background-color: rgb(195, 195, 195, 0.3);
+    margin-bottom: 10px;
+    color: #434343;
+  }
+  
+  .contact_us_1 input:focus {
+    background-color: white;
+    color: #0b4b7f;
+  }
+  
+  .contact_us_1 input::placeholder,
+  textarea::placeholder {
+    color: white;
+    font-size: 18px;
+  }
+  
+  .contact_us div textarea:focus {
+    background-color: white;
+    color: #0b4b7f;
+  }
+  
+  .contact_us div textarea:focus::placeholder {
+    color: rgb(103, 103, 103);
+  }
+  
+  .contact_us div textarea {
+    font-size: 15px;
+    padding: 10px;
+    height: 200px;
+    width: 100%;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    background-color: rgb(195, 195, 195, 0.3);
+    margin-bottom: 20px;
+    color: #434343;
+  }
+  
+  .submit_div {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+  
+  .contact_us button {
+    padding: 13px 40px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  
+  footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #0b4b7f;
+    font-size: 20px;
+    height: 50px;
+  }
+  
+  /* --------------------------------------------------------------------------- */
+  /* @media tags starts from here */
+  
+  @media (max-width: 1660px) {
+    .services::before {
+      scale: 0.85;
+      left: -0.3%;
+    }
+  
+    .products img {
+      height: 225px;
+    }
+  }
+  
+  @media (min-width: 1660px) {
+    .services::before {
+      scale: 0.85;
+      left: -0.3%;
+    }
+  
+    .products img {
+      height: 225px;
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    .services_div_2 {
+      width: 60%;
+    }
+  
+    .services::before {
+      scale: 1;
+      left: 0.6%;
+    }
+  
+    .home_pic_text {
+      margin-top: 7%;
+    }
+  
+    .products img {
+      height: 250px;
+    }
+  
+    .products h1 {
+      font-size: 60px;
+    }
+  
+    .products p {
+      color: rgb(119, 119, 119);
+      font-size: 21px;
+      text-align: left;
+    }
+  
+    .products h6 {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  
+    .about_us_div_0 p {
+      font-size: 27px;
+      font-weight: lighter;
+      text-align: justify;
+      line-height: 36px;
+    }
+  
+    .about_us_div_0 h6 {
+      font-size: 22px;
+    }
+  
+    .contact_us div input {
+      font-size: 23px;
+    }
+  }
+  
+  @media (max-width: 1440px) {
+    .services::before {
+      scale: 0.76;
+      left: -1.4%;
+    }
+  }
+  
+  @media (max-width: 1366px) {
+    .services::before {
+      scale: 0.71;
+      left: -1.79%;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .home_text h2 {
+      font-size: 49px;
+    }
+  
+    .services::before {
+      scale: 0.66;
+      left: -2.3%;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .slider {
+      display: inline-block !important;
+      margin-right: 2.5%;
+    }
+  
+    .right {
+      display: none;
+    }
+  
+    .home_text h2 {
+      font-size: 39px;
+    }
+  
+    .services::before {
+      scale: 0.54;
+      left: -4.5%;
+    }
+  
+    .services::after {
+      transform: scale(0.6);
+      right: -12%;
+    }
+  
+    .services_div_2 {
+      width: 100%;
+    }
+  
+    .services_div2 {
+      width: 360px;
+      height: 242px;
+    }
+  
+    .services_div2_div2 {
+      width: 70%;
+      padding-left: 13px;
+    }
+  
+    .products img {
+      height: 170px;
+    }
+  
+    .about_us::before {
+      left: -8%;
+      scale: 0.5;
+    }
+  
+    .contact_us div h1 {
+      font-size: 35px;
+    }
+  
+    .contact_us div input {
+      font-size: 20px;
+      width: 49.2%;
+    }
+  
+    .contact_us_1 input::placeholder,
+    textarea::placeholder {
+      color: white;
+      font-size: 13px;
+    }
+  
+    .contact_us button {
+      padding: 10px 20px;
+      font-size: 17px;
+    }
+  
+    footer p {
+      font-size: 17px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .home_text h2 {
+      font-size: 29px;
+    }
+  
+    nav {
+      position: fixed;
+    }
+  
+    .home_text p {
+      font-size: 8px;
+    }
+  
+    .home_img img {
+      height: 20px;
+      width: 20px;
+    }
+  
+    .home_btn {
+      font-size: 8px;
+    }
+  
+    .home_pic_text {
+      margin-top: 25%;
+    }
+  
+    .mobile_nav a {
+      text-align: center;
+      font-size: 11px;
+    }
+  
+    .services::before {
+      display: none;
+    }
+  
+    .services::after {
+      display: none;
+    }
+  
+    .products h6 {
+      font-size: 10px;
+      padding: 7px 8px;
+    }
+  
+    .products h1 {
+      font-size: 34px;
+    }
+  
+    .products p {
+      font-size: 12px;
+      text-align: justify;
+    }
+  
+    .about_us::before {
+      left: -11%;
+      scale: 0.4;
+      top: -14%;
+    }
+  
+    .about_us_div_0 h1 {
+      font-size: 43px;
+    }
+  
+    .about_us_div_0 p {
+      font-size: 12px;
+      line-height: 19px;
+    }
+  
+    .contact_us div input {
+      width: 49%;
+    }
+  }
+  
+  @media (max-width: 720px) {
+    .services_div h1 {
+      font-size: 40px;
+    }
+    .contact_us div input {
+      width: 100%;
+    }
+  
+    .services_div2_div2 h3 {
+      font-size: 15px;
+      font-weight: 700;
+    }
+  
+    .services_div2 {
+      width: 340px;
+      height: 180px;
+    }
+  
+    .contact_us div h1 {
+      font-size: 27px;
+    }
+  
+    .contact_us_1 {
+      width: 35%;
+    }
+  
+    .about_us::before {
+      display: none;
+    }
+  
+    .about_us::after {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 720px) {
+    .products img {
+      height: 140px;
+    }
+  
+    .products_container {
+      width: 85%;
+    }
+  
+    .services_div2_div2 p {
+      font-size: 13px;
+    }
+  
+    .products_img_container_2 {
+      width: 85%;
+    }
+    .contact_us button {
+      padding: 6px 12px;
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 414px) {
+    .nav {
+      height: 50px;
+    }
+    nav::before {
+      height: 50px;
+    }
+    .mobile_nav {
+      top: 50px;
+    }
+    .slider {
+      font-size: 20px !important;
+    }
+    .left img {
+      height: 40px;
+      width: 40px;
+    }
+    .home {
+      height: 100vh;
+    }
+    .home_img img {
+      height: 15px;
+      width: 15px;
+    }
+    .home_btn {
+      font-size: 6px;
+    }
+    .home_text h2 {
+      font-size: 20px;
+    }
+    .home_text p {
+      font-size: 8px;
+    }
+    .home_pic_text {
+      margin-top: 20%;
+      width: 50%;
+    }
+    .services_div2 {
+      width: 80%;
+      height: 18%;
+    }
+    .services_div2_div0 {
+      flex-direction: column;
+    }
+    .services_div2_div1 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .services_div2_div2 {
+      width: 100%;
+    }
+    .products {
+      height: 1700px;
+    }
+    .products_container {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .products_img_container_2 div {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .products_container1 {
+      width: 100%;
+    }
+    .products img {
+      height: 200px;
+      width: fit-content;
+    }
+    .about_us_div_0 {
+      flex-direction: column;
+    }
+    .about_us_div_2 {
+      justify-content: center;
+      width: 100%;
+    }a
+    .about_us_div_1 {
+      width: 100%;
+    }
+    .contact_us_1 {
+      width: 90%;
+    }
+    footer p {
+      font-size: 10px;
+      height: 30px;
+    }
+  }
+  @media (min-height: 700px) {
+    .home {
+      height: 50vh;
+    }
+  }
+  @media (max-height: 400px) {
+    .home {
+      height: 60vh;
+    }
+  }
+  

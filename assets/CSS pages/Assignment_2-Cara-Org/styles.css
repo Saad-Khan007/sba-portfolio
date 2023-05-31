@@ -1,0 +1,629 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    color: transparent;
+}
+
+body::-webkit-scrollbar-track {
+    color: transparent;
+    background-color: transparent;
+}
+
+/* Top Navigation bar starts from here */
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    box-shadow: 0px 0px 10px #1c1c1c;
+    z-index: 10000;
+}
+
+.left {
+    width: 10%;
+    font-family: 'Lobster', cursive;
+    font-style: italic;
+    font-size: 50px;
+    letter-spacing: -3px;
+    display: flex;
+    padding-left: 25px;
+    justify-content: right;
+    align-items: center;
+}
+
+.mid {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: right;
+}
+
+.mid>a {
+    display: inline-block;
+    padding: 13px 20px;
+    text-align: center;
+    color: #1c1c1c;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+}
+.right {
+    width: 8%;
+    display: flex;
+    justify-content: left;
+    gap: 0 30px;
+    padding-right: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.hov:hover {
+    color: green;
+}
+
+.hov:active {
+    color: rgb(255, 255, 255);
+}
+
+.hov::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: green;
+    display: block;
+    transition: 0.5s ease-in-out;
+}
+
+.hov:focus::after {
+    width: 60%;
+    color: green;
+
+}
+
+.hov:hover::after {
+    width: 60%;
+    color: green;
+}
+
+
+.ba {
+    padding: 13px 20px ;
+    
+}
+
+.ba:hover {
+    color: green;
+
+}
+
+/* ------------------------------------------------------------------ */
+/* Mobile Nav bar starts fromo here */
+.mobile_nav {
+    position: fixed;
+    float: right;
+    top: 0;
+    right: -350px;
+    height: 100vh;
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 40px 60px rgb(0 0 0 / 10%);
+    padding: 80px 0 0 10px;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.mobile_nav>a {
+    display: block;
+    width: max-content;
+    margin: 0;
+    padding: 15px 0;
+    position: static;
+    color: #1c1c1c;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all .5s;
+}
+.slider_icn {
+    padding: 13px 0;
+    padding-left: -40px;
+    font-size: 20px !important;
+    display: none !important;
+}
+
+.slider_icn:hover {
+    color: green;
+}
+
+
+/* -------------------------------------------------------------- */
+/* Home Section starts from here */
+.home {
+    background: rgba(0, 0, 0, 0.7) center center fixed url(https://www.blog.venture-care.com/wp-content/uploads/2018/11/E-Commerce-Website-Development-company-In-India.jpg);
+    height: 585px;
+    background-size: cover;
+    background-blend-mode: darken;
+    display: flex;
+    padding-left: 6%;
+}
+
+.home1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home1 h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.home1 h1 {
+    color: white;
+    font-size: 45px;
+}
+
+.home1 p {
+    color: rgb(204, 203, 203);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.home1 a {
+    padding: 15px 30px;
+    width: 150px;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    border: 2px solid white;
+}
+
+.home1 a:hover {
+    color: green;
+    border-color: green;
+}
+
+/* ------------------------------------------------------------------ */
+
+
+/* Cards Section starts from here */
+.shop_label {
+    display: block;
+    font-size: 40px;
+    color: #1c1c1c;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.shop_label p {
+    width: max-content;
+    border-bottom: 4px solid green;
+    padding-bottom: 5px;
+}
+
+.products {
+    z-index: 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px 2.7%;
+}
+
+.cards {
+    z-index: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid rgb(243, 243, 243);
+    box-shadow: 0px 0px 10px #484848;
+    padding: 10px 12px;
+    width: 18%;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    top: 0;
+}
+
+.cards:hover {
+    z-index: 0;
+    transform: scale(1.05);
+}
+
+.cards img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.brand {
+    font-size: 13px;
+    padding: 10px 0px;
+    color: rgb(119, 119, 119);
+
+}
+
+.title {
+    font-weight: 900;
+    font-size: 18px;
+    color: #1c1c1c;
+    padding: 0px 0px;
+    line-height: 0px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Price {
+    color: rgb(2, 107, 2);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn {
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    /* border-radius: 50%; */
+    height: 40px;
+    width: 40px;
+    padding: -10px 5px;
+    transition: all .7s;
+}
+
+.btn:hover {
+    /* background-color: green; */
+    color: green;
+}
+
+.sta {
+    margin-top: 10px;
+}
+
+.checked {
+    color: rgb(255, 255, 37);
+}
+
+.stars {
+    display: flex;
+}
+
+/* ------------------------------------------------------------------ */
+/* News section starts from here  */
+.news {
+    height: 300px;
+    background: rgba(8, 0, 30, 0.7) no-repeat center center url(https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+    background-size: cover;
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 6%;
+}
+
+h1 {
+    color: white;
+}
+
+.signup p {
+    color: rgb(161, 160, 160);
+
+}
+
+.signup b {
+    color: rgb(197, 197, 0);
+    font-weight: 900;
+}
+
+.signupbtn {
+    margin-left: auto;
+    display: block;
+}
+
+.signupbtn input[type="text"] {
+    width: 400px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 25px 0 0 25px;
+    padding-left: 20px;
+}
+
+.signupbtn input[type="button"] {
+    border-radius: 0 25px 25px 0;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: none;
+    background-color: rgb(35, 148, 35);
+    transition: all .3s;
+    margin-left: -.8%;
+}
+
+.signupbtn input[type="button"]:hover {
+    background-color: rgb(0, 95, 0);
+}
+
+::-webkit-input-placeholder {
+    padding-left: 10px;
+}
+
+h4 {
+    display: inline;
+    color: rgb(84, 84, 84);
+}
+
+p {
+    display: inline;
+
+}
+
+.signup a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+/* ------------------------------------------------------------------ */
+/* Footer section starts from here  */
+
+.c {
+    color: #000000;
+    font-family: 'Lobster', cursive;
+    font-style: italic;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1% 6%;
+    margin: 20px 0;
+}
+
+.footer_text1 {
+    line-height: 20px;
+}
+
+.blok {
+    display: block;
+    text-decoration: none;
+    color: rgb(81, 76, 76);
+    font-weight: 200;
+}
+
+.blok:hover {
+    color: green;
+}
+
+.con {
+    margin-bottom: 10px;
+}
+
+.follow {
+    margin: 10px 0;
+}
+
+.footer_text1 a>img {
+    width: 250px;
+}
+
+.s_icon {
+    transition: all .3s;
+    color: #000000;
+    font-size: 30px  ;
+}
+
+.s_icon:hover {
+    color: green;
+}
+
+.p {
+    color: rgb(142, 139, 139)  ;
+    display: block;
+    margin-bottom: -15px;
+}
+
+.p_color {
+    color: rgb(142, 139, 139)  ;
+
+}
+
+.copyright {
+    height: 50px;
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+/* ------------------------------------------------------- */
+/* playstore and app store button */
+.storeicn {
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.storeicn:hover {
+    transform: scale(1.05);
+}
+
+/* --------------------------------------- */
+/* Now onwards there are media queries */
+/* Now onwards there are media queries */
+@media (max-width:1920px){
+    .home{
+        padding-left: 7%;
+    }
+    .news{
+        padding: 0 7%;
+    }
+    .footer{
+        padding: 0 7%;
+    }
+} 
+@media (max-width:1280px) {
+    .home{
+        padding-left: 5%;
+    }
+    .news{
+        padding: 0 5%;
+    }
+    .footer{
+        padding: 0 5%;
+    }
+    
+}
+@media (max-width:1024px) {
+    .home{
+        padding-left: 4%;
+    }
+    .news{
+        padding-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .signupbtn{
+        margin: 10px 0; 
+    }
+    .footer{
+        padding: 0 4%;
+    }
+    
+}
+@media (max-width:800px) {
+    .slider_icn{
+        display: block !important;
+    }
+    .right{
+        width: 15%;
+        gap: 1px;
+    }
+    .mid a{
+        display: none;
+    }
+    .products{
+        gap: 30px 5%;
+    }
+    .cards{
+        width: 23%;
+    }
+    .cards img{
+        height: 120px;
+    }
+    .home{
+        padding-left: 3%;
+    }
+    .news{
+        padding: 0 3%;
+    }
+    .footer{
+        padding: 0 3%;
+        flex-wrap: wrap;
+        gap: 10px 50px;
+    }
+    .nav{
+        padding: 0 4%;
+    }
+    
+}
+@media (max-width:680px){
+    .signupbtn input[type="text"]{
+        width: 200px;
+        height: 30px;
+    }
+    .signupbtn input[type="button"]{
+        height: 30px;
+    }
+}
+@media (max-width:600px){
+    .products{
+        gap: 30px 5%;
+    }
+    .cards{
+        width: 50%;
+    }
+    .cards img{
+        height: 190px;
+    }
+}
+@media (max-width:414px){
+ .nav{
+    padding: 0 10%;
+ }
+ .home1 a{
+    width: max-content;
+    font-size: 10px;
+ }
+}
+/* --------------------------------------------- */
+/* error: 404*/
+.Err404{
+    height: 82vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Err404 b{
+    font-size: 50px;
+    font-weight: 900;
+}
+.Err404 h2{
+    font-style: italic;
+}
+.Err404 a{
+    font-size: 15px;
+    text-decoration: none;
+    margin: 20px 0;
+    padding: 12px 25px;
+    border-radius: 20px;
+    background-color: #1c1c1c;
+    color: white;
+    cursor: pointer;
+    transition: all .4s;
+}
+.Err404 a:hover{
+    background-color: white;
+    color: #1c1c1c;
+    box-shadow: 0 0 10px #1c1c1c;
+}
+.Err404 a b{
+    font-size: 17px;
+}

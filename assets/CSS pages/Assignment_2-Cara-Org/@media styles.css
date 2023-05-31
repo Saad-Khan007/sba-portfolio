@@ -1,0 +1,107 @@
+/* Now onwards there are media queries */
+@media (max-width:1920px){
+    .home{
+        padding-left: 7%;
+    }
+    .news{
+        padding: 0 7%;
+    }
+    .footer{
+        padding: 0 7%;
+    }
+} 
+@media (max-width:1280px) {
+    .home{
+        padding-left: 5%;
+    }
+    .news{
+        padding: 0 5%;
+    }
+    .footer{
+        padding: 0 5%;
+    }
+    
+}
+@media (max-width:1024px) {
+    .home{
+        padding-left: 4%;
+    }
+    .news{
+        padding-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .signupbtn{
+        margin: 10px 0; 
+    }
+    .footer{
+        padding: 0 4%;
+    }
+    
+}
+@media (max-width:800px) {
+    .slider_icn{
+        display: block !important;
+    }
+    .right{
+        width: 15%;
+        gap: 1px;
+    }
+    .mid a{
+        display: none;
+    }
+    .products{
+        gap: 30px 5%;
+    }
+    .cards{
+        width: 23%;
+    }
+    .cards img{
+        height: 120px;
+    }
+    .home{
+        padding-left: 3%;
+    }
+    .news{
+        padding: 0 3%;
+    }
+    .footer{
+        padding: 0 3%;
+        flex-wrap: wrap;
+        gap: 10px 50px;
+    }
+    .nav{
+        padding: 0 4%;
+    }
+    
+}
+@media (max-width:680px){
+    .signupbtn input[type="text"]{
+        width: 200px;
+        height: 30px;
+    }
+    .signupbtn input[type="button"]{
+        height: 30px;
+    }
+}
+@media (max-width:600px){
+    .products{
+        gap: 30px 5%;
+    }
+    .cards{
+        width: 50%;
+    }
+    .cards img{
+        height: 190px;
+    }
+}
+@media (max-width:414px){
+ .nav{
+    padding: 0 10%;
+ }
+ .home1 a{
+    width: max-content;
+    font-size: 10px;
+ }
+}
